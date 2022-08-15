@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "853291612522",
+    "project_id": "balanceme-752e6",
+    "storage_bucket": "balanceme-752e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853291612522:android:82ddc8c551b507d98f0d13",
+        "android_client_info": {
+          "package_name": "com.example.balanceme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853291612522-c828qi029l675lfhcvfe01hlc2lhimt2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz-j4XqH2362UHua2U1pMDeJ42jHF1sQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853291612522-c828qi029l675lfhcvfe01hlc2lhimt2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

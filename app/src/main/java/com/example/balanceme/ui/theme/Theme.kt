@@ -5,7 +5,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import com.example.balanceme.R
+import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
     primary = RichBlack_Light,
@@ -14,18 +14,15 @@ private val DarkColorPalette = darkColors(
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
-
-    /* Other default colors to override
-    background = Color.White,
+    primary = RichBlack_Light,
+    primaryVariant = RichBlack_Dark,
+    secondary = Gainsboro,
+    background = Gainsboro,
     surface = Color.White,
     onPrimary = Color.White,
     onSecondary = Color.Black,
     onBackground = Color.Black,
     onSurface = Color.Black,
-    */
 )
 
 @Composable

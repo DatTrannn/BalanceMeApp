@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/Desktop/CP3407/BalanceMeApp/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.1035" />
+        <entry key="..\:/Users/ASUS/Desktop/CP3407/BalanceMeApp/app/src/main/res/drawable-nodpi/ic_launcher_foreground.xml" value="0.1175" />
+        <entry key="..\:/Users/ASUS/Desktop/CP3407/BalanceMeApp/app/src/main/res/drawable-xhdpi/calculate-48px.xml" value="0.1035" />
+        <entry key="..\:/Users/ASUS/Desktop/CP3407/BalanceMeApp/app/src/main/res/drawable/calculate.xml" value="0.1035" />
         <entry key="..\:/Users/ASUS/Desktop/CP3407/BalanceMeApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/Desktop/CP3407/BalanceMeApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1175" />
       </map>
     </option>
   </component>

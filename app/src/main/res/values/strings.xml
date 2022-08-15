@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BalanceMe</string>
+    <string name="home_feed">Home</string>
+    <string name="home_calculator">Calculator</string>
+    <string name="home_expert">Expert</string>
+    <string name="home_profile">Profile</string>
 </resources>
