@@ -126,6 +126,7 @@ fun LoginPage(navController: NavHostController, auth: FirebaseAuth) {
                                             "Logged in successfully",
                                             Toast.LENGTH_SHORT
                                         ).show()
+                                        navController.navigate(Routes.App.route)
                                         Log.d(TAG, "The user has successfully logged in")
                                     } else {
                                         Log.w(TAG, "The user has Failed to log in", it.exception)

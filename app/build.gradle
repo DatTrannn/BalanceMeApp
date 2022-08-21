@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 apply plugin: 'com.google.gms.google-services'
@@ -55,8 +57,17 @@ dependencies {
     implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.material:material-icons-extended:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
+    // Annotation processor
+    kapt("androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
+    implementation 'androidx.activity:activity-ktx:1.5.1'
     implementation "androidx.activity:activity-compose:1.5.1"
+    implementation 'androidx.fragment:fragment-ktx:1.6.0-alpha01'
+    implementation 'androidx.fragment:fragment:1.5.2'
     implementation "androidx.navigation:navigation-compose:2.5.1"
     implementation 'androidx.navigation:navigation-runtime-ktx:2.5.1'
     implementation platform('com.google.firebase:firebase-bom:30.3.2')
@@ -64,7 +75,24 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation("androidx.room:room-runtime:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
-    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-auth:21.0.7'
+    implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
+    implementation 'com.squareup.moshi:moshi:1.13.0'
+    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    // Retrofit with Moshi Converter
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation("io.coil-kt:coil-compose:2.2.0")
+    implementation("com.google.dagger:hilt-android:$dagger_version")
+    kapt("com.google.dagger:hilt-android-compiler:$dagger_version")
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
+    implementation("javax.inject:javax.inject:1")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
     annotationProcessor("androidx.room:room-compiler:$room_version")
     testImplementation 'junit:junit:4.13.2'
 
@@ -73,4 +101,8 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+}
+
+kapt {
+    correctErrorTypes = true
 }

@@ -5,7 +5,7 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun Expert(
-    onSnackClick: (Long) -> Unit,
+    onMenuItemClick: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
 

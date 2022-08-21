@@ -1,6 +1,5 @@
 package com.example.balanceme.ui.home
 
-import android.graphics.drawable.Icon
 import androidx.annotation.FloatRange
 import androidx.annotation.StringRes
 import androidx.compose.animation.animateColorAsState
@@ -40,6 +39,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.lerp
 import androidx.core.os.ConfigurationCompat
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
@@ -48,19 +48,22 @@ import com.example.balanceme.ui.components.BalanceMeSurface
 import com.example.balanceme.ui.theme.BalanceMeTheme
 import java.util.*
 
-
 fun NavGraphBuilder.addHomeGraph(
-    onSnackSelected: (Long, NavBackStackEntry) -> Unit,
+    onMenuItemSelected: (Int, NavBackStackEntry) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    composable(HomeSections.FEED.route) { from ->
-        Feed(onSnackClick = { id -> onSnackSelected(id, from) }, modifier)
+    composable(HomeSections.MENUITEM.route) { from ->
+        val menuItemViewModel = viewModel<MenuItemViewModel>()
+        MenuItem(onMenuItemClick = { id -> onMenuItemSelected(id, from) },
+            modifier,
+            menuItemViewModel
+        )
     }
     composable(HomeSections.CALCULATOR.route) { from ->
-        Calculator(onSnackClick = { id -> onSnackSelected(id, from) }, modifier)
+        Calculator(onMenuItemClick = { id -> onMenuItemSelected(id, from) }, modifier)
     }
     composable(HomeSections.EXPERT.route) { from ->
-        Expert(onSnackClick = { id -> onSnackSelected(id, from) }, modifier)
+        Expert(onMenuItemClick = { id -> onMenuItemSelected(id, from) }, modifier)
     }
     composable(HomeSections.PROFILE.route) {
         Profile(modifier)
@@ -72,7 +75,7 @@ enum class HomeSections(
     val icon: ImageVector,
     val route: String,
 ) {
-    FEED(R.string.home_feed, Icons.Outlined.Home, "home/feed"),
+    MENUITEM(R.string.home_feed, Icons.Outlined.Home, "home/MenuItem"),
     CALCULATOR(R.string.home_calculator, Icons.Outlined.Calculate, "home/calculator"),
     EXPERT(R.string.home_expert, Icons.Outlined.Groups, "home/expert"),
     PROFILE(R.string.home_profile, Icons.Outlined.AccountCircle, "home/profile")
@@ -337,7 +340,7 @@ private fun BalanceMeBottomNavPreview() {
     BalanceMeTheme {
         BalanceMeBottomBar(
             tabs = HomeSections.values(),
-            currentRoute = "home/feed",
+            currentRoute = "home/MenuItem",
             navigateToRoute = { }
         )
     }

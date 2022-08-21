@@ -9,8 +9,6 @@ import com.example.balanceme.ui.LoginPage
 import com.example.balanceme.ui.SignUp
 import com.example.balanceme.ui.theme.BalanceMeTheme
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 
 @Composable
 fun BalanceMe() {
@@ -31,6 +29,10 @@ fun BalanceMe() {
 
             composable(Routes.ForgotPassword.route) {
                 ForgotPassword(navController = navController)
+            }
+
+            composable(Routes.App.route) {
+                BalanceMeApp()
             }
         }
     }
