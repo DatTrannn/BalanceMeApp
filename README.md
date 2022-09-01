@@ -1,2 +1,1 @@
-# Foodies
-A clean MVVM architecure application
+# Balance Me
