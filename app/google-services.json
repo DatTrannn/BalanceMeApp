@@ -1,33 +1,42 @@
 {
   "project_info": {
-    "project_number": "853291612522",
-    "project_id": "balanceme-752e6",
-    "storage_bucket": "balanceme-752e6.appspot.com"
+    "project_number": "670330888634",
+    "firebase_url": "https://moose-dev.firebaseio.com",
+    "project_id": "moose-dev",
+    "storage_bucket": "moose-dev.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:853291612522:android:82ddc8c551b507d98f0d13",
+        "mobilesdk_app_id": "1:670330888634:android:c3113b35e085b56803bd83",
         "android_client_info": {
-          "package_name": "com.example.balanceme"
+          "package_name": "com.moose.foodies"
         }
       },
       "oauth_client": [
         {
-          "client_id": "853291612522-c828qi029l675lfhcvfe01hlc2lhimt2.apps.googleusercontent.com",
+          "client_id": "670330888634-s8dju9qckpr58vfrn5ujfsqrqv2a711r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moose.foodies",
+            "certificate_hash": "8530cdfb26e0d902a6d06208bf8e9d219b749a9c"
+          }
+        },
+        {
+          "client_id": "670330888634-q603qfcfeviiqmnteb7jul8uj5uipa96.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCz-j4XqH2362UHua2U1pMDeJ42jHF1sQM"
+          "current_key": "AIzaSyAhJpG9h-80PiKs02-SwoVxJwsMLcDFbIg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "853291612522-c828qi029l675lfhcvfe01hlc2lhimt2.apps.googleusercontent.com",
+              "client_id": "670330888634-q603qfcfeviiqmnteb7jul8uj5uipa96.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

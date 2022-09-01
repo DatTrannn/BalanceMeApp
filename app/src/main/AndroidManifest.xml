@@ -1,29 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.balanceme">
+    package="com.nutrition.balanceme">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name="com.nutrition.balanceme.BalanceMeApplication"
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BalanceMe"
+        android:theme="@style/Theme.Foodies"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:ignore="AllowBackup">
+
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="https://fce7fe200cad4993bf3a5fc7780734c4@o998282.ingest.sentry.io/5964421" />
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://174548668845171:X1yZhbyB1NSUFkxxbCbEWt_W06k@dnp5ccl7d" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.BalanceMe">
+            android:name="com.nutrition.balanceme.presentation.features.navigation.NavigationActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="foodies.moose.ac" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.nutrition.balanceme.presentation.features.auth.AuthActivity"
+            android:exported="true" />
+
+        <activity
+            android:theme="@style/Theme.Foodies.Splash"
+            android:name="com.nutrition.balanceme.presentation.features.intro.IntroActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Foodies" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/primaryLight</item>
+        <item name="android:navigationBarColor">@color/primaryLight</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primaryLight</item>
+    </style>
 
-    <style name="Theme.BalanceMe" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/purple_700</item>
+    <style name="Theme.Foodies.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/primaryLight</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/balanceme_logos_black</item>
     </style>
 </resources>

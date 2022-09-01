@@ -1,11 +1,13 @@
 <resources>
-    <string name="app_name">BalanceMe</string>
-    <string name="home_feed">Home</string>
-    <string name="home_calculator">Calculator</string>
-    <string name="home_expert">Expert</string>
-    <string name="home_profile">Profile</string>
-    <string name="label_search">Perform search</string>
-    <string name="search_menu_item">Search Menu Item</string>
+    <string name="app_name">Balance Me</string>
+    <string name="home">Home</string>
+    <string name="fridge">Fridge</string>
+    <string name="explore">Explore</string>
+    <string name="profile">Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="add">Add</string>
+    <string name="main">Main</string>
+    <string name="recipe">Recipe</string>
+    <string name="chef">Chef</string>
     <string name="label_back">Back</string>
-
 </resources>
